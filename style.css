@@ -1,0 +1,151 @@
+body {
+  background-color: black;
+  background-image: url("images/code.gif");
+  background-position: center;
+  color: azure;
+  text-shadow: 0px 2px 3px rgba(90, 86, 86, 0.5);
+  font-family:'Courier New', Courier, monospace;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* img { */
+
+/* } */
+
+.profile-img {
+  /* background-image: url("images/phone.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: contain; */
+  box-shadow: inset 3px 3px 3px 3px rgba(250, 247, 247, 0.5);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(69, 70, 71);
+}
+
+.card {
+  text-align: center;
+  width: clamp(300px, 50%, 80%);
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(69, 70, 71);
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  background-image: url("images/metal.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding: 5px;
+  margin: 5px;
+}
+
+.horizontal-container {
+  margin:auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: inherit;
+}
+
+.container {
+  /* height: 100vmin; */
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  align-items:center;
+  /* overflow: hidden; */
+}
+
+a {
+  /* text-decoration: none; */
+  color: azure;
+  text-shadow: 0px 2px 3px rgba(90, 86, 86, 0.5);
+  font-family:'Courier New', Courier, monospace
+}
+
+ul {
+  text-align: left;
+}
+
+#rabbit-hole {
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(75, 76, 76);
+  color: limegreen;
+  /* text-shadow: 0px 2px 3px rgba(249, 245, 245, 0.736); */
+  font-family: monospace;
+  font-size: 15px;
+  padding: 10px;
+}
+
+#rabbit-hole:hover {
+  color: rgb(148, 203, 148);
+  text-shadow: 0px 2px 3px rgba(249, 245, 245, 0.94);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(195, 195, 196);
+}
+
+#links {
+  visibility: hidden;
+}
+
+.set-visible {
+  /* display: block; */
+  visibility: visible !important;
+}
+
+.hand {
+  /* flex-basis: 20%; */
+  cursor: pointer;
+}
+
+.hand:hover {
+  animation: bob 500ms ease-in-out forwards;
+}
+
+@keyframes bob {
+  0% {transform: translateY(0%);}
+  50% {transform: translateY(10%);}
+  100% {transform: translateY(0%);}
+}
+
+.flyup {
+  animation: goingup 500ms ease-out forwards;
+}
+
+.flydown {
+  animation: goingdown 500ms ease-out forwards;
+}
+/* Move it (define the animation) */
+@keyframes goingup {
+  0%   {transform: translateY(200%); visibility: collapse;}
+  100% {transform: translateY(0%); visibility: visible;}
+}
+
+@keyframes goingdown {
+  0%   {transform: translateY(0%); visibility: visible;}
+  100% {transform: translateY(200%); visibility: collapse;}
+}
